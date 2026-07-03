@@ -1,0 +1,25 @@
+//6. WAP in JavaScript to check whether the given number is Armstrong or not. (A)
+
+<!doctype html>
+<html>
+  <body>
+    <script>
+      let n = parseInt(prompt("Enter a number:"));
+
+      let sum = 0;
+      let digit;
+      let temp = n;
+      while (n != 0) {
+        digit = n % 10;
+        n = parseInt(n / 10);
+        sum = sum + digit * digit * digit;
+      }
+
+      if (sum == temp) {
+        document.write(temp + " is an Armstrong number");
+      } else {
+        document.write(temp + " is not an Armstrong number");
+      }
+    </script>
+  </body>
+</html>
