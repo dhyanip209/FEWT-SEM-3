@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+    font-size: 80px;
+}
+</style>
+<body>
+    <button onclick="slotMachine()"> GIVE A GO<BR>
+        🍒 🍒 🍒</button>
+    <div id="slot"></div>
+    <script>
+        function slotMachine(){
+
+    let fruits = [
+        "🍒",
+        "🍎",
+        "🍋",
+        "🍇",
+        "🍉",
+        "🍓",
+        "🍍",
+        "🥝"
+    ];
+    let a=Math.floor(Math.random()*fruits.length)
+    let b=Math.floor(Math.random()*fruits.length)
+    let c=Math.floor(Math.random()*fruits.length)
+let result = `${fruits[a]} ${fruits[b]} ${fruits[c]}`;
+
+
+if(a==b && b==c){
+    result=result+ "<br>🎉 JACKPOT!"
+
+}
+   else{
+        result += "<br>😢 Try Again";
+    }
+    document.getElementById("slot").innerHTML = result;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 100px;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+
+  <body>
+    <button onclick="showEmoji()">Show Random Emoji</button>
+    <div id="emoji"></div>
+    <script>
+      function showEmoji() {
+        let emojis = [
+          "😀",
+          "😂",
+          "😍",
+          "😎",
+          "🤖",
+          "🥳",
+          "🎉",
+          "🚀",
+          "🔥",
+          "❤️",
+          "💯",
+          "⭐",
+          "🌈",
+          "🍕",
+          "🍔",
+          "🍩",
+          "🐶",
+          "🐱",
+          "🦁",
+          "🐼",
+          "🦄",
+          "⚽",
+          "🏀",
+          "🎮",
+          "🎸",
+          "🎧",
+          "🚗",
+          "✈️",
+          "👑",
+          "💎",
+          "📚",
+          "⌚",
+        ];
+        let random = Math.floor(Math.random() * emojis.length);
+     document.getElementById("emoji").innerHTML = emojis[random];
+      }
+    </script>
+  </body>
+</html>

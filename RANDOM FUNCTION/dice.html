@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      #dice{
+    font-size:80px;
+    text-align:center;
+    margin-top:20px;
+}
+</style>
+<body>
+     <button onclick="dice()">roll</button>
+    <div id="dice"></div>
+<script>
+         
+   function dice() {
+
+    let face = ["⚅","⚄","⚃","⚂","⚁","⚀"];
+
+    let num = Math.floor(Math.random() * face.length);
+
+    document.getElementById("dice").innerHTML = face[num];
+
+}
+
+     
+</script>    
+</body>
+</html>

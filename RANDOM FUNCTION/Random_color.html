@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random color</title>
+  </head>
+  <style>
+    #myID {
+      height: 900px;
+      width: 100%;
+      background: rgb(0, 0, blue);
+    
+    }
+  #dice{
+    font-size:80px;
+    text-align:center;
+    margin-top:20px;
+}
+  </style>
+  <body>
+    <button onclick="changeBG();changeFont();changeFontColor();dice()">Click</button>
+    <div id="myID">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam soluta
+      dicta aliquid consectetur illum voluptas eum accusamus non. Adipisci
+      suscipit commodi atque, quasi numquam possimus obcaecati laboriosam omnis
+      architecto?
+    </div>
+    <div id="dice">🎲 </div>
+    <script>
+      function changeBG() {
+        bg = document.getElementById("myID");
+        rcolor = Math.floor(Math.random() * 255);
+        bcolor = Math.floor(Math.random() * 255);
+        gcolor = Math.floor(Math.random() * 255);
+        bg.style.background = `rgb(${rcolor},${bcolor},${gcolor})`;
+
+      }
+
+      function changeFont() {
+        let fonts = [
+          "Arial",
+          "Verdana",
+          "Georgia",
+          "Times New Roman",
+          "Courier New",
+          "Tahoma",
+          "Trebuchet MS",
+          "Impact",
+        ];
+      
+      let bg = document.getElementById("myID");
+      let random = Math.floor(Math.random() * fonts.length);
+              bg.style.fontFamily = fonts[random];
+      }
+      function changeFontColor(){
+        bg=document.getElementById("myID")
+        let r = Math.floor(Math.random() * 256);
+let g = Math.floor(Math.random() * 256);
+let b = Math.floor(Math.random() * 256);
+
+bg.style.color = `rgb(${r},${g},${b})`;
+      }
+
+
+        function dice() {
+    let num = Math.floor(Math.random() * 6) + 1;
+
+    document.getElementById("dice").innerHTML = "🎲 " + num;
+}
+     
+    </script>
+  </body>
+</html>
